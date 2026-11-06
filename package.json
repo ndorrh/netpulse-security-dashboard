@@ -1,0 +1,29 @@
+{
+  "name": "netpulse-monorepo",
+  "version": "1.0.0",
+  "private": true,
+  "description": "NetPulse Security Dashboard - Real-Time OS Network, Hardware, and Peripheral Security Monitor",
+  "workspaces": [
+    "packages/*",
+    "apps/*"
+  ],
+  "scripts": {
+    "start": "npm run start --workspace=apps/server",
+    "dev:server": "npm run dev --workspace=apps/server",
+    "dev:client": "npm run dev --workspace=apps/client",
+    "dev": "npm run build:client && npm run start --workspace=apps/server",
+    "build:client": "npm run build --workspace=apps/client",
+    "build": "npm run build:client",
+    "test": "npm run test --workspace=apps/server"
+  },
+  "keywords": [
+    "security",
+    "hardware-monitor",
+    "network-monitor",
+    "peripheral-audit",
+    "usb-security",
+    "exfiltration-detection"
+  ],
+  "author": "Antigravity",
+  "license": "MIT"
+}
